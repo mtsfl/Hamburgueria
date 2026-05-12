@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="finalizarpedido.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="inicio">
+            <h1 class="titulo">Estação<span> Smash</span></h1>
+        </section>
+        <section>
+            <nav>
+                <a href="home.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="#" class="carrinho">
+                    <i class="bi bi-cart"></i>
+                    <span id="notificacao" class="notificacao">0</span>
+                </a>
+            </nav>
+        </section>
+        
+    </header>
+    <main>
+        <div class="finalizacao2">
+            <h1>Finalizar Pedido</h1>
+        </div>
+        <section>
+
+            <div class="finalizacao">
+                <img id="foto" src="" alt="">
+                <div class="div-coisa">
+                    <div class="div-coisa2">
+                        <h1 id="titulo"></h1>
+                        <p id="descricao"></p>
+                    </div>
+                    <div class="div-coisa3">
+                        <p id="preco"></p>
+                        <div class="botao">
+                            <button onclick="diminuir()">-</button>
+                            <span id="quantidade">1</span>
+                            <button onclick="aumentar()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="dados">
+                <div class="nome">
+                    <span>Seu Nome:</span>
+                    <input type="text">
+                </div>
+                <div class="celular">
+                    <span>Seu WhatsApp:</span>
+                    <input type="number">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="pagamento">
+                <span>Forma de pagamento:</span>
+                <select name="Tipo" id="pagamento">
+                    <option value="">Dinheiro</option>
+                    <option value="">Cartão</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <a href="#" id="link-carrinho">
+                <button class="concluir" id="finalizar">Adicionar ao carrinho</button>
+            </a>
+        </section>
+    </main>
+    <script src="finalizarpedido.js"></script>
+</body>
+
+</html>
