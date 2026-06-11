@@ -3,15 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   height: 100px;
   background-color: #ae0c12;
   display: flex;
   justify-content: space-between;
 }
+
 body {
   background-color: #050201;
 }
+
 .titulo {
   color: white;
   font-size: 50px;
@@ -21,96 +24,192 @@ body {
   padding: 10px;
   gap: 10px;
 }
+
 .titulo span {
   color: #f9d424;
 }
-.carrinho{
+
+.carrinho {
   color: white;
 }
+
 a {
   text-decoration: none;
   color: white;
   font-size: 30px;
 }
+
 nav {
   padding: 30px;
   display: flex;
   gap: 40px;
 }
-.notificacao{
-    background-color: #f9d424; /* Cor amarela para destacar no vermelho */
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 50%;
-    display: none;
-    padding: 5px 12px;
-}
-/* Janela do Carrinho (Modal) */
-.modal-carrinho {
-    display: none;
-    position: fixed;
-    right: 20px;
-    top: 100px;
-    width: 350px;
-    background: #1b1a1a;
-    border: 1px solid white;
-    border-radius: 10px;
-    z-index: 2000;
-    padding: 15px;
-    color: white;
+
+.notificacao {
+  background-color: #f9d424;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 50%;
+  display: none;
+  padding: 5px 12px;
 }
 
-.modal-carrinho.aberto {
-    display: block;
+.modal_carrinho {
+  display: none;
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 350px;
+  background: #1b1a1a;
+  border: 1px solid white;
+  border-radius: 10px;
+  z-index: 2000;
+  padding: 15px;
+  color: white;
 }
 
-.topo-carrinho {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #444;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+/* Faz a lista de itens do carrinho rolar quando tiver muitos produtos */
+#itens_carrinho {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 6px; /* espaço pra não “encostar” a scrollbar */
 }
 
-.topo-carrinho button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
+/* Opcional: scrollbar mais sutil no Chrome/Edge */
+#itens_carrinho::-webkit-scrollbar {
+  width: 8px;
+}
+
+#itens_carrinho::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+#itens_carrinho::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.modal_carrinho.aberto {
+  display: block;
+}
+
+.topo_carrinho p {
+  font-family: "Montserrat", cursive;
+
+}
+
+.topo_carrinho {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.topo_carrinho button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .item-no-carrinho {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
 }
 
 .info-item p {
-    font-size: 14px;
-    margin: 0;
+  font-size: 19px;
+  margin: 0;
+  font-family: "Luckiest", cursive;
+
 }
 
-.btn-remover {
-    background: none;
-    border: none;
-    color: #ff4444;
-    cursor: pointer;
-    margin-left: auto;
+.btn_remover {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  margin-left: auto;
 }
 
-.total-carrinho {
-    margin-top: 15px;
-    text-align: right;
-    font-size: 18px;
-    color: #f9d424;
+.qtd_controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
 }
-/*==============MAIN===================*/
+
+.btn_qtd {
+  background: rgb(39, 35, 35);
+  border: 1px solid #666;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.qtd_num {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.btn_limpar {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 10px;
+  height: 45px;
+  padding: 0 14px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.finalizar{
+  background-color: #ae0c12;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+}
+.finalizar:hover{
+  box-shadow: 0px 0px 18px 0px red;
+  transition: ease 0.4s;
+}
+
+.btn_limpar:hover {
+  box-shadow: 0px 0px 18px 0px red;
+  transition: ease 0.4s;
+}
+
+.total_carrinho {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 18px;
+  color: #f9d424;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
 
 main {
   display: flex;
@@ -121,7 +220,8 @@ main section {
   display: flex;
   justify-content: center;
 }
-.div-coisa {
+
+.div_coisa {
   display: flex;
   background-color: rgb(27, 26, 26);
   width: 100%;
@@ -131,17 +231,21 @@ main section {
   border-bottom-right-radius: 18px;
   margin-left: -35px;
 }
-.div-coisa2 {
+
+.div_coisa2 {
   padding: 20px;
 }
-.div-coisa2 #descricao {
-  width: 60%;
+
+.div_coisa2 #descricao {
   margin-top: 30px;
+  width: auto;
 }
-.div-coisa3 {
+
+.div_coisa3 {
   padding: 40px;
   width: 35%;
 }
+
 .finalizacao2 h1 {
   color: white;
   font-size: 45px;
@@ -149,22 +253,26 @@ main section {
   padding: 40px;
   margin-left: 100px;
 }
+
 .finalizacao img {
   object-fit: cover;
   border-radius: 15px;
 }
+
 .finalizacao h1 {
   color: #efc831;
   font-size: 40px;
   font-family: "Montserrat", cursive;
 }
+
 .finalizacao #preco {
   color: white;
-  font-size: 35px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
   font-family: "Montserrat", cursive;
   text-align: center;
 }
+
 .finalizacao #descricao {
   color: white;
   font-size: 30px;
@@ -183,33 +291,11 @@ main section {
   margin-right: 100px;
 }
 
-.botao {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  border-radius: 10px;
-  font-size: 30px;
-  font-family: "Luckiest";
-  margin-top: 80px;
-  border: solid 1px white;
-}
-
-.botao button {
-  height: 60px;
-  width: 60%;
-  background-color: rgb(39, 35, 35);
-  border-radius: 10px;
-  color: white;
-  font-size: 40px;
-  border: solid 1px white;
-}
-.botao button:hover {
-  cursor: pointer;
-}
 .dados span {
   color: white;
   font-family: "Montserrat", cursive;
 }
+
 .dados input {
   background-color: black;
   border-radius: 7px;
@@ -219,11 +305,13 @@ main section {
   color: white;
   padding: 10px;
 }
+
 .dados {
   display: flex;
   gap: 50px;
   margin-top: 20px;
 }
+
 .nome {
   display: flex;
   flex-direction: column;
@@ -231,16 +319,20 @@ main section {
   padding: 10px;
   font-size: 25px;
 }
+
 .celular {
   font-size: 25px;
   display: flex;
   padding: 10px;
   gap: 10px;
   flex-direction: column;
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;}
+
+  input[type=tel]::-webkit-inner-spin-button,
+  input[type=tel]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
 }
 
 .pagamento span {
@@ -248,7 +340,8 @@ main section {
   font-family: "Montserrat", cursive;
   font-size: 25px;
 }
-.pagamento select{
+
+.pagamento select {
   width: 770px;
   background-color: rgb(27, 26, 26);
   color: white;
@@ -257,13 +350,15 @@ main section {
   height: 60px;
   font-size: 20px;
 }
-.pagamento{
+
+.pagamento {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 30px;
 }
-.concluir{
+
+.concluir {
   background-color: #ae0c12;
   color: white;
   border: none;
@@ -274,8 +369,42 @@ main section {
   border-radius: 8px;
   margin-top: 50px;
 }
-.concluir:hover{
-  transition: ease 0.9s;
-  transform: scale(1.10);
+
+.concluir:hover {
+  transition: ease 0.5s;
+  transform: scale(1.03);
   box-shadow: 0px 0px 25px 0px red;
+}
+
+/* Toast de finalização */
+.toast_pedido {
+  position: fixed;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: #1b1a1a;
+  border: 1px solid #f9d424;
+  color: #f9d424;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.toast_pedido.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 600px) {
+  .toast_pedido {
+    width: calc(100% - 24px);
+    text-align: center;
+    padding: 12px 14px;
+    top: 90px;
+  }
 }

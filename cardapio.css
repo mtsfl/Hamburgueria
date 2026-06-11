@@ -43,8 +43,7 @@ nav{
 }
 .meio img{
     object-fit: cover;
-    display: block;
-    margin-left: 440px;
+    margin: auto;
 }
 .botao1, .botao2, .botao3{
     background-color: #ae0c12;
