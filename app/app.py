@@ -8,8 +8,9 @@ from flask_cors import CORS
 from ml_recommender import AssocModel, load_orders_from_sqlite, train_item_to_item_association, recommend
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, 'db.sqlite3')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+DB_PATH = os.path.join(ROOT_DIR, 'db.sqlite3')
 
 # Must match keys used by the frontend (pedido_finalizado.js)
 CATALOG: List[Dict[str, str]] = [
@@ -39,8 +40,7 @@ def build_model() -> AssocModel:
 
 def create_app() -> Flask:
     # Serve os arquivos estáticos (HTML/CSS/JS/imagens) da raiz do projeto
-    app = Flask(__name__, static_folder=os.path.join(BASE_DIR), static_url_path='')
-    CORS(app)
+    app = Flask(__name__, static_folder=ROOT_DIR, static_url_path='')
 
 
     model_holder: Dict[str, Any] = {}
