@@ -81,5 +81,9 @@ def debug():
     import os
     files = os.listdir(ROOT_DIR)
     return jsonify({"root_dir": ROOT_DIR, "files": files})
+
+@app.get('/')
+def index():
+    return app.send_static_file('home.html')
     
 
