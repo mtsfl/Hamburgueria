@@ -73,6 +73,6 @@ def create_app() -> Flask:
 app = create_app()
 
 if __name__ == '__main__':
-    # default port 5501 to avoid clashing
-    app.run(host='127.0.0.1', port=5501, debug=True)
+    port = int(os.environ.get('PORT', 5501))
+    app.run(host='0.0.0.0', port=port, debug=False)
 
