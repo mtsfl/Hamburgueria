@@ -76,3 +76,10 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5501))
     app.run(host='0.0.0.0', port=port, debug=False)
 
+@app.get('/debug')
+def debug():
+    import os
+    files = os.listdir(ROOT_DIR)
+    return jsonify({"root_dir": ROOT_DIR, "files": files})
+    
+
