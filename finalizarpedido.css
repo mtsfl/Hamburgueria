@@ -407,4 +407,42 @@ main section {
     padding: 12px 14px;
     top: 90px;
   }
+
+  /* Layout responsivo do formulário/pagamento */
+  .div_coisa{
+    margin-left: 0;
+    border-radius: 18px;
+  }
+
+  .div_coisa3{
+    width: 100%;
+    padding: 20px;
+  }
+
+  .finalizacao{
+    width: 100%;
+    margin-right: 0;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .dados{
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .dados input{
+    width: 100%;
+  }
+
+  .pagamento select{
+    width: 100%;
+  }
+
+  .concluir{
+    width: 100%;
+    height: 70px;
+  }
 }
+

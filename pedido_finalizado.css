@@ -154,7 +154,7 @@ main {
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   nav a {
@@ -163,6 +163,38 @@ main {
 
   .titulo {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 14px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .hero {
+    width: 92vw;
+    padding: 20px 0 40px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .card img {
+    height: 160px;
   }
 }
 

@@ -100,4 +100,53 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2%;
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .burguers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav {
+    gap: 20px;
+    padding: 20px;
+  }
+  nav a {
+    font-size: 22px;
+  }
+  .titulo {
+    font-size: 36px;
+  }
+  .cardapio1 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 85px;
+  }
+  .titulo {
+    font-size: 30px;
+  }
+  nav {
+    gap: 14px;
+    padding: 12px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  .burguers {
+    grid-template-columns: 1fr;
+    padding: 4%;
+  }
+  .box img {
+    width: 100%;
+    max-width: 280px;
+    height: 220px;
+  }
+  .botao1, .botao2, .botao3 {
+    width: 100%;
+    max-width: 280px;
+  }
 }

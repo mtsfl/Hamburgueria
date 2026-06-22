@@ -100,3 +100,55 @@ nav{
     padding: 2%;
     gap: 60px;
 }
+
+@media (max-width: 900px) {
+    .cardapio1{
+        margin-left: 0;
+        text-align: center;
+    }
+    .cardapio2{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+    nav{
+        gap: 20px;
+        padding: 20px;
+    }
+    nav a{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    header{
+        height: 85px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    nav{
+        gap: 14px;
+        padding: 12px;
+    }
+    nav a{
+        font-size: 16px;
+    }
+    .cardapio2{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 4%;
+    }
+    .box img{
+        width: 100%;
+        max-width: 280px;
+        height: 220px;
+    }
+    .box p{
+        font-size: 22px;
+    }
+    .botao3{
+        width: 100%;
+        max-width: 280px;
+    }
+}
