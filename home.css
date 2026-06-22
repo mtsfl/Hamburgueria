@@ -4,14 +4,26 @@
   box-sizing: border-box;
 }
 header{
-  height: 100px;
   background-color: #ae0c12;
+  width: 100%;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* layout responsivo do header */
+header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 14px 16px;
+  gap: 16px;
   flex-wrap: wrap;
 }
+
 
 body{
     background-color: #050201
@@ -40,15 +52,21 @@ nav{
 }
 .meio{
     display: grid;
+    place-items: center;
 }
+
+.meio img{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
 .meio img,
 .melhor{
     grid-area: 1 / 1;
 }
-.meio img{
-    object-fit: cover;
-    margin: auto;
-}
+/* remover imagem do home em todos os dispositivos */
+
 .melhor{
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -111,6 +129,8 @@ nav{
   .burguers {
     grid-template-columns: repeat(2, 1fr);
   }
+  header {
+  }
   nav {
     gap: 20px;
     padding: 20px;
@@ -121,15 +141,16 @@ nav{
   .titulo {
     font-size: 36px;
   }
-  .cardapio1 {
-    margin-left: 0;
+  .meio img{
+    display: none;
+  }
+  .pedidos{
+    margin-left: 10px;
   }
 }
 
+
 @media (max-width: 600px) {
-  header {
-    height: 85px;
-  }
   .titulo {
     font-size: 30px;
   }
@@ -153,4 +174,11 @@ nav{
     width: 100%;
     max-width: 280px;
   }
+  .meio img{
+    display: none;
+  }
+  .melhor{
+    display: none;
+  }
 }
+

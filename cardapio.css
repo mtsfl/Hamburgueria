@@ -4,12 +4,23 @@
     box-sizing: border-box;
 }
 header{
-  height: 100px;
   background-color: #ae0c12;
+  width: 100%;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* layout responsivo do header */
+header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 14px 16px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 body{
@@ -104,6 +115,16 @@ nav{
     gap: 60px;
 }
 
+/* Ajuste geral para ajudar no mobile */
+header{
+    padding: 14px 12px;
+}
+nav{
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
 @media (max-width: 900px) {
     .cardapio1{
         margin-left: 0;
@@ -121,12 +142,12 @@ nav{
     nav a{
         font-size: 22px;
     }
+    .meio img{
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
-    header{
-        height: 85px;
-    }
     .titulo{
         font-size: 30px;
     }
@@ -153,5 +174,8 @@ nav{
     .botao3{
         width: 100%;
         max-width: 280px;
+    }
+    .meio img{
+        display: none;
     }
 }

@@ -401,7 +401,27 @@ main section {
 }
 
 @media (max-width: 600px) {
+  header {
+    height: auto;
+    overflow-x: hidden;
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
   .toast_pedido {
+
     width: calc(100% - 24px);
     text-align: center;
     padding: 12px 14px;
@@ -412,11 +432,14 @@ main section {
   .div_coisa{
     margin-left: 0;
     border-radius: 18px;
+    width: 100%;
+    overflow-x: hidden;
   }
 
-  .div_coisa3{
-    width: 100%;
-    padding: 20px;
+.div_coisa3{
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
   }
 
   .finalizacao{
@@ -443,6 +466,16 @@ main section {
   .concluir{
     width: 100%;
     height: 70px;
+  }
+  .titulo{
+    font-size: 28px;
+  }
+  #preco{
+    display: none;
+  }
+
+  .finalizacao2{
+    display: none;
   }
 }
 
